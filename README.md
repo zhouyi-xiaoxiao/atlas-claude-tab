@@ -2,6 +2,8 @@
 
 **Make ⌘T in ChatGPT Atlas open claude.ai — instantly.**
 
+Written 9–10 June 2026 and tested against ChatGPT Atlas 1.2026.126.0 on an Apple Silicon Mac. Later Atlas updates may rename the menu items it drives; see [Caveats](#caveats).
+
 A ~200-line Swift menu-bar-less helper that captures ⌘T *only while Atlas is frontmost* and routes it to Claude, with three context-aware behaviors:
 
 | You are on… | ⌘T does | Feel |
@@ -87,3 +89,7 @@ defaults delete com.openai.atlas NSUserKeyEquivalents   # if you added the remap
 ## 中文速览
 
 把 ChatGPT Atlas 的 ⌘T 换成"立刻给我 Claude"：不在 Claude 页就秒切过去；已在 Claude 页就复制一个新标签；一个都没有才新建。难点在于 Atlas 的新标签页是原生 SwiftUI 页面（不走 `chrome://newtab`），设置项、扩展、企业策略、菜单快捷键重映射、`--load-extension`、Chromium singleton、AppleScript `execute javascript` 全部走不通；最终方案 = Carbon 全局热键（无需任何权限、按 app 前台动态注册）+ Accessibility API 驱动 Atlas 自己的菜单和窗口。过程中的坑详见上文 "Why" 与 "Tricks" 两节。
+
+---
+
+Xiaoxiao Zhouyi · [zhouyixiaoxiao.com](https://zhouyixiaoxiao.com/)
