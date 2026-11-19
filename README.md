@@ -2,7 +2,7 @@
 
 **Make ⌘T in ChatGPT Atlas open claude.ai — instantly.**
 
-Written 9–10 June 2026 and tested against ChatGPT Atlas 1.2026.126.0 on an Apple Silicon Mac. Later Atlas updates may rename the menu items it drives; see [Caveats](#caveats).
+First released on 10 June 2026 and tested against ChatGPT Atlas 1.2026.126.0 on an Apple Silicon Mac. Later Atlas updates may rename the menu items it drives; see [Caveats](#caveats).
 
 A ~200-line Swift menu-bar-less helper that captures ⌘T *only while Atlas is frontmost* and routes it to Claude, with three context-aware behaviors:
 
