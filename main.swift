@@ -166,7 +166,7 @@ RunLoop.main.add(timer, forMode: .common)
 
 let trusted = AXIsProcessTrustedWithOptions([kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary)
 syncToFrontmost()
-logLine("atlas-claude-tab v5 started (mode=\(config.mode)) (AX trusted=\(trusted), frontmost=\(NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "?"))")
+logLine("atlas-claude-tab 1.0 started (mode=\(config.mode)) (AX trusted=\(trusted), frontmost=\(NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "?"))")
 
 NSApplication.shared.setActivationPolicy(.prohibited)
 NSApplication.shared.run()
